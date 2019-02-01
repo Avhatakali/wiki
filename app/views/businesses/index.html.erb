@@ -1,0 +1,20 @@
+<h4>Business types lists</h4>
+
+<%= link_to 'new', new_business_path %>
+
+<table>
+    <tr>
+      <th>Id</th>
+        <th>Business</th>
+    </tr>
+
+    <% @businesses.each do |business| %>
+        <tr>
+            <td><%= business.id %></td>
+            <td><%= business.business_type %></td>
+            <td><%= link_to 'show', business_path(business) %></td>
+            <td><%= link_to 'Edit', edit_business_path(business) %></td>
+            <td><%= link_to 'Add new', new_business_place_path(business) %></td>
+        </tr>
+    <% end %>
+</table>

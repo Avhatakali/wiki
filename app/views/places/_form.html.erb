@@ -1,0 +1,30 @@
+<%= form_with(model: [ @business, @place ], local: true) do |form| %>
+      <p>
+           <%= form.label :'Business name' %> <br>
+           <%= form.text_field :business_name %>
+      </p>
+
+      <p>
+           <%= form.label :Address %> <br>
+           <%= form.text_field :address %>
+      </p>
+
+      <p>
+           <%= form.label :'Business contact' %> <br>
+           <%= form.text_field :phone_number %>
+      </p>
+
+      <p>
+           <%= form.label :Website %> <br>
+           <%= form.text_field :website %>
+      </p>
+
+      <p>
+           <%= form.label :'Business hours' %> <br>
+           <%= form.time_field :hours_of_oparatiion %>
+      </p>
+
+      <p>
+          <%= form.submit %>
+      </p>
+<% end %>

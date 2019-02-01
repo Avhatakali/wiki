@@ -1,0 +1,26 @@
+<h4>Detailed Catagory</h4>
+
+<%= @business.business_type %> <br>
+
+<%= link_to 'index', businesses_path %>
+
+<table>
+    <tr>
+        <th>Business Name</th>
+        <th>Address</th>
+        <th>Contact Number</th>
+        <th>Website</th>
+    </tr>
+
+    <% @business.places.each do |place| %>
+        <tr>
+            <td><%= place.business_name %></td>
+            <td><%= place.address %></td>
+            <td><%= place.phone_number %></td>
+            <td><%= place.website %></td>
+            <td><%= place.hours_of_operation %></td>
+            <td><%= link_to 'show', business_place_path(@business, place) %></td>
+            <td><%= link_to 'Edit', edit_business_place_path(@business, place) %></td>
+        </tr>
+    <% end %>
+</table>
